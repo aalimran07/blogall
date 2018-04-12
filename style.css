@@ -1,0 +1,686 @@
+/*!
+Theme Name: Blogall
+Theme URI: http://underscores.me/
+Author: Abdullah AL Imran
+Author URI: http://theimran.com
+Description: Creative Blog Website
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: blogall
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Blogall is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: #50575f;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    color: #222222
+}
+
+p {
+    margin-bottom: 10px
+}
+
+a {
+    color: #50575f;
+}
+
+ul,
+ol {
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+table {
+    margin-bottom: 20px;
+}
+
+input {
+    border: 1px solid #e1e1e1;
+    height: 50px;
+    width: 300px;
+    padding-left: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #fbc0d4;
+    color: #fff;
+    text-transform: uppercase;
+    border: 0
+}
+
+input[type="submit"],
+button[type="submit"] {
+    background: #fbc0d4;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+select:focus,
+input:focus,
+input:active,
+button:focus,
+button:active {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/*select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+*/
+/* Document
+	 ========================================================================== */
+
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+
+/* Do not show the outline on the skip link target. */
+
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+    clear: both;
+}
+
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.widget {
+    margin: 0 0 1.5em;
+    /* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+    max-width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+.sticky {
+    display: block;
+}
+
+.hentry {
+    margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+    display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 1.5em 0 0;
+}
+
+.page-links {
+    clear: both;
+    margin: 0 0 1.5em;
+}
+
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+    /* Theme Footer (when set to scrolling) */
+    display: none;
+}
+
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+
+.infinity-end.neverending .site-footer {
+    display: block;
+}
+
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+
+/* Make sure embeds and iframes fit their containers. */
+
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+
+/* Make sure logo link wraps around logo image. */
+
+.custom-logo-link {
+    display: inline-block;
+}
+
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+    margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+
+.gallery {
+    margin-bottom: 1.5em;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+.gallery-caption {
+    display: block;
+}
+
+
+
+/*start menu area*/
+
+div#cssmenu ul>li>a {
+    color: #50575f;
+    text-transform: uppercase;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+#cssmenu>ul>li:before {
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    right: 0;
+    background: #50575f;
+    content: "";
+}
+
+#cssmenu>ul>li:last-child:before {
+    display: none;
+}
+
+.site-header {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    background-image: url(img/header-left-img.jpg);
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+nav.navbararea {
+    margin-top: 50px;
+}
+
+nav.navbararea {
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7
+}
+
+nav.navbararea div {
+    display: inline-block !important;
+}
+
+.searchbox input {
+    height: 39px;
+    background: #fbc0d4;
+    margin-left: -5px;
+    width: 200px;
+    float: left;
+    border: 0
+}
+
+.searchbox button {
+    display: inline-block;
+    height: 39px;
+    width: 40px;
+    float: left;
+    padding: 0;
+    padding-left: 10px;
+}
+
+.searchbox {
+    position: relative;
+    top: 5px;
+}
+
+.social-link-top a {
+    display: inline-block;
+    margin-left: 15px;
+    color: #4d4d4d;
+    font-size: 18px;
+}
+
+.social-link-top a:hover {
+    text-decoration: none;
+    color: #fbc0d4;
+}
+
+.site-info p {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400
+}
+
+.site-info a {
+    color: #fbc0d4;
+}
+
+.site-footer {
+    padding: 30px 0;
+}
+
+.widget {
+    border: 1px solid #e7e7e7;
+    padding: 20px;
+    text-align: center;
+}
+
+h2.widget-title, h2.widgettitle {
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.widget ul,.widget ol{
+	margin-bottom: 0;
+}
+
+.page-content form input.search-submit {
+    width: 120px;
+    display: inline-block;
+    margin-left: -4px;
+    border: 1px solid #fbc0d4;
+    position: relative;
+    top: 2px;
+}
+section.error-404.not-found{
+	text-align: center;
+}
+section.error-404.not-found .page-content{
+	margin-top: 0
+}
+section.error-404.not-found form{
+	margin-top: 20px;
+}
+section.error-404.not-found h1.page-title {
+    margin-bottom: 10px;
+}
+.page-content form label {
+    display: inline-block;
+}
+.widget select {
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid #e1e1e1
+}
+.widget select{
+	color: #c0c0c0
+}
+
+/*start archive section*/
+
+header.page-header {
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+/*single blog post design*/
+
+.post-date {
+    color: #9d9d9d;
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.post-date:before {
+    position: absolute;
+    width: calc(100% + 40px);
+    height: 1px;
+    content: "";
+    background: #bbbbbb;
+    bottom: 0;
+    left: -40px;
+    z-index: -1;
+}
+.post-date span {
+    height: 30px;
+    width: 1px;
+    background: #bbbbbb;
+    display: inline-block;
+    position: relative;
+    top: 12px;
+}
+
+.post-date time {
+    padding-right: 20px;
+}
+.readmore a {
+    color: #50575f;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.readmore a span {
+    padding-right: 8px;
+    font-weight: 600;
+    color: #222;
+}
+
+
+/*start single post css*/
+
+header.single-post-header {
+    text-align: center;
+}
+
+.post-social-share a {
+    width: 80px;
+    text-align: center;
+    background: #444444;
+    color: #fff;
+    line-height: 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.post-social-share {
+    margin-bottom: 20px;
+}
+.post-category-time > div{
+    display:inline-block;
+}
+.post-category-time > div:first-child:before {
+    position: absolute;
+    height: 15px;
+    width: 1px;
+    background: #C2C2C2;
+    content:"";
+    right: 0;
+    top: 10px;
+    transform: rotate(25deg)
+}
+
+.post-category-time > div:first-child {
+    padding-right: 10px;
+    margin-right: 10px;
+    position: relative;
+}
+
+/*end of single post css*/
