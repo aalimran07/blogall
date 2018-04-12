@@ -183,6 +183,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 function blogall_admin_scripts() {
 	wp_enqueue_style('blogall-admin-custom', get_template_directory_uri() . '/css/admin/custom.css');
-	wp_enqueue_script( 'blogall-admin-custom', get_template_directory_uri() . '/js/admin/custom.js' );
+	 wp_enqueue_media();
+	wp_enqueue_script( 'blogall-admin-custom', get_template_directory_uri() . '/js/admin/custom.js', array('jquery'), null, true );
 }
 add_action('admin_enqueue_scripts', 'blogall_admin_scripts');
